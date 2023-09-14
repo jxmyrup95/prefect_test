@@ -3,7 +3,7 @@
 # control along with your flow code.
 
 # Generic metadata about this project
-name: Prefect Course
+name: prefect_test
 prefect-version: 2.13.0
 
 # build section allows you to manage and build docker images
@@ -14,12 +14,13 @@ push: null
 
 # pull section allows you to provide instructions for cloning this project in remote locations
 pull:
-- prefect.deployments.steps.set_working_directory:
-    directory: C:\Users\jmy\OneDrive - NORDEN\Documents\Prefect Course
+- prefect.deployments.steps.git_clone:
+    repository: https://github.com/jxmyrup95/prefect_test.git
+    branch: main
 
 # the deployments section allows you to provide configuration for deploying flows
 deployments:
-- name: DeployCLItest
+- name: Jesper2
   version: null
   tags: []
   description: null

@@ -9,7 +9,7 @@ from prefect.events import emit_event
 
 # some_function()
 
-@flow(name="Prefect Cloud Quickstart Jesper", retries=4, retry_delay_seconds=2)
+@flow(name="Prefect Cloud Quickstart Jesper2", retries=4, retry_delay_seconds=2)
 def quickstart_flow(name: str="_HEJ_HEJ"):
     logger = get_run_logger()
     logger.warning("Local quickstart flow is running!")
@@ -36,4 +36,4 @@ def more_logging2(string: str):
 
 if __name__ == "__main__":
     # string = quickstart_flow()
-    string = quickstart_flow.serve(name="Testing4")
+    string = quickstart_flow.serve(name="Testing6", cron="3 * * * *")
